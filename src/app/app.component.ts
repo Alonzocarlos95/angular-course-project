@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'course-project';
+  navBarStates: {recipesOn:boolean, shoppingOn: boolean} = {
+    recipesOn: true,
+    shoppingOn: false,
+  };
+  showOptionNav(navBarData:{recipesActive: boolean, shoppingActive: boolean}) {
+    this.navBarStates.recipesOn = navBarData.recipesActive;
+    this.navBarStates.shoppingOn = navBarData.shoppingActive;
+  }
 }
