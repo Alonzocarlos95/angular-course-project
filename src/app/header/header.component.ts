@@ -6,27 +6,27 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  @Output() navOption = new EventEmitter<{
-    recipesActive: boolean,
-    shoppingActive: boolean,
-  }>();
+  // @Output() navOption = new EventEmitter<{
+  //   recipesActive: boolean,
+  //   shoppingActive: boolean,
+  // }>();
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  viewRecipePage() {
-    this.navOption.emit({
-      recipesActive: true,
-      shoppingActive: false,
-    })
-  }
+  // viewRecipePage() {
+  //   this.navOption.emit({
+  //     recipesActive: true,
+  //     shoppingActive: false,
+  //   })
+  // }
 
-  viewShoppingListPage() {  
-    this.navOption.emit({
-      recipesActive: false,
-      shoppingActive: true,
-    })
-  }
+  // viewShoppingListPage() {  
+  //   this.navOption.emit({
+  //     recipesActive: false,
+  //     shoppingActive: true,
+  //   })
+  // }
 
 }
